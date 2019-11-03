@@ -12,7 +12,7 @@ It should be able to work on any OS supports Tun/Tap devices, but I have only te
 
 It's quite easy to create a Tun/Tap device on OpenBSD with [ifconfig(8)](https://man.openbsd.org/ifconfig.8):
 
-```shell
+```sh
 ifconfig tun0 create
 ifconfig tun0 inet 10.0.0.1 10.0.0.2 netmask 255.255.255.255
 ```
@@ -28,13 +28,13 @@ dest 10.0.0.2
 
 and run:
 
-```shell
+```sh
 sh /etc/netstart
 ```
 
 ### CentOS
 
-```shell
+```sh
 ip tuntap add tun0 mode tun
 ifconfig tun0 10.0.0.1 dstaddr 10.0.0.2 up
 ```
@@ -45,13 +45,13 @@ This project tries to build on any system without a dependency, even `gmake` whi
 
 To build it on the OS which would append a 4-byte network byte order integer containing the address family tunnel header such as [OpenBSD](https://man.openbsd.org/tun.4), run:
 
-```shell
+```sh
 make utuntap
 ```
 
 otherwise(Linux) run:
 
-```shell
+```sh
 make tuntap
 ```
 
@@ -65,7 +65,7 @@ port = Port.open({:spawn, "tuntap tun0"}, [:binary, {:packet, 2}, :exit_status])
 
 then current process will receive messages contain outgoing packets:
 
-```elixir
+```
 {#Port<0.1444>, {:data, packet}}
 ```
 
