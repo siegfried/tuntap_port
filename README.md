@@ -1,6 +1,6 @@
 # Tun/Tap port for Erlang/Elixir
 
-This is a port written in C to work with Tun/Tap devices in Erlang/Elixir applications, as Erlang/Elixir cannot open special files such as devices. Other languages should be able to use it as well, because it is just a simple program printing outgoing packets to standard output and receiving incoming packets from standard input concurrently, with 2 bytes as the packet length appended.
+This is a port written in C to work with Tun/Tap devices in Erlang/Elixir applications, as Erlang/Elixir cannot open special files such as devices. Other languages should be able to use it as well, because it is just a simple program printing outgoing packets to standard output and receiving incoming packets from standard input concurrently, with 2 bytes as the packet length prepended.
 
 It should be able to work on any OS supports Tun/Tap devices, but I have only tested it on OpenBSD 6.5, OpenBSD 6.6 and CentOS 15 hitherto.
 
