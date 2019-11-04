@@ -12,7 +12,8 @@
 #define BUFFER_SIZE 65535
 
 int
-tuntap_open(const char *devname) {
+tuntap_open(const char *devname)
+{
         char *directory = "/dev/";
         char *path;
         int fd;

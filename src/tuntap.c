@@ -13,7 +13,8 @@
 #define BUFFER_SIZE 65535
 
 int
-tuntap_open(const char *devname) {
+tuntap_open(const char *devname)
+{
         struct ifreq ifr;
         int fd;
 
