@@ -8,8 +8,8 @@ clean:
 prepare:
 	mkdir -p _build
 
-utuntap: _build src/port.c src/utuntap.c src/main.c
+utuntap: prepare src/port.c src/utuntap.c src/main.c
 	cc $(CFLAGS) -o _build/tuntap src/port.c src/utuntap.c src/main.c
 
-tuntap: _build src/port.c src/tuntap.c src/main.c
+tuntap: prepare src/port.c src/tuntap.c src/main.c
 	cc $(CFLAGS) -o _build/tuntap src/port.c src/tuntap.c src/main.c
