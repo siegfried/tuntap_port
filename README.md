@@ -43,17 +43,21 @@ ifconfig tun0 10.0.0.1 dstaddr 10.0.0.2 up
 
 This project tries to build on any system without a dependency, even `gmake` which needs to be installed on OpenBSD.
 
-To build it on the OS which would prepend a 4-byte network byte order integer containing the address family tunnel header such as [OpenBSD](https://man.openbsd.org/tun.4), run:
+### OpenBSD
 
 ```shell
-make utuntap
+make openbsd
 ```
 
-otherwise(Linux) run:
+### Linux
 
 ```shell
-make tuntap
+make linux
 ```
+
+### Others
+
+They are not supported yet, but should not be hard.
 
 ## Usage
 
